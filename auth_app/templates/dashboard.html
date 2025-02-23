@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-200 to-purple-400 min-h-screen flex flex-col items-center justify-center">
+    
+    <!-- Navbar -->
+    <nav class="w-full bg-slate-900 py-4 px-6 flex justify-between items-center text-white fixed top-0 left-0 right-0 z-50">
+        <h1 class="text-xl font-semibold">Dashboard</h1>
+        <button class="bg-red-500 px-4 py-2 rounded-full hover:bg-red-700" onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="w-full max-w-3xl mt-10 p-10 bg-slate-900 text-white rounded-lg shadow-lg text-center">
+        <h2 class="text-3xl font-bold">{{username}} Welcome to Your Dashboard</h2>
+        <p class="mt-4 text-indigo-300">You are now logged in. Explore your account and manage your settings.</p>
+        
+    </div>
+
+    <script>
+        function logout() {
+            alert("Logging out...");
+            window.location.href = "Logout"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
